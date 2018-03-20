@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/top_split_view"
+        layout="@layout/bar_split_blue_view"/>
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/common.36dp"
+        android:background="@color/white">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/transfer_tablelayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.120dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp"
+            app:tabBackground="@drawable/table_background"
+            app:tabMaxWidth="1100dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabTextColor="@color/white50"
+            app:tabTextAppearance="@style/tab_size"
+            app:tabIndicatorHeight="@dimen/common.2dp">
+
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/dck_record_viewpager"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/transfer_tablelayout"
+            android:layout_marginTop="@dimen/common.20dp">
+
+        </android.support.v4.view.ViewPager>
+
+    </RelativeLayout>
+
+</LinearLayout>

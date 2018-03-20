@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/split_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common.0dp"
+        android:layout_weight="3"
+        android:background="@drawable/assets_bg">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/common.40dp"
+            android:padding="@dimen/common.40dp"
+            android:background="@color/transparent"
+            android:src="@drawable/back_white"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common.190dp"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/common.60sp"
+            android:textColor="@color/white"
+            />
+            <!--android:text="DKC"-->
+
+        <TextView
+            android:id="@+id/sum_dkc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/common.20dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/common.55sp"
+            />
+            <!--android:text="58.555"-->
+
+        <TextView
+            android:id="@+id/sum_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sum_dkc"
+            android:textSize="@dimen/common.50sp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common.10dp"
+            />
+            <!--android:text="≈ ¥18.888"-->
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:visibility="gone"
+            android:id="@+id/dkc_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sum_money"
+            android:layout_marginTop="@dimen/common.50dp"
+            android:layout_marginBottom="@dimen/common.40dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp"/>
+
+        <ImageButton
+            android:id="@+id/qr_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/common.40dp"
+
+            android:background="@color/transparent"
+            android:padding="@dimen/common.40dp"
+            android:src="@drawable/property_qr"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common.20dp"
+        android:layout_weight="7">
+
+        <RelativeLayout
+            android:id="@+id/money_address_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:background="@drawable/layout_ripple">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/split_color_dd"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/split_color_dd"/>
+
+            <TextView
+                android:id="@+id/money_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common.50dp"
+                android:textSize="@dimen/common.50sp"
+                android:textColor="@color/text_black"
+                android:text="@string/wallet_addr"/>
+
+            <TextView
+                android:id="@+id/address_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/money_address"
+                android:layout_marginLeft="@dimen/common.30dp"
+                android:layout_marginRight="@dimen/common.20dp"
+                android:layout_alignBaseline="@id/money_address"
+                android:textSize="@dimen/common.40sp"
+                android:textColor="@color/text_dark"
+                android:singleLine="true"
+                />
+                <!--android:text="58ce88ef55ssddeee66658ce88ef55ssddeee666"-->
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/address_value"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common.20dp"
+                android:background="@drawable/address"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common.20dp"
+            android:layout_below="@id/money_address_relative"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/common.50dp"
+                android:layout_marginTop="@dimen/common.30dp"
+                android:textSize="@dimen/common.50sp"
+                android:textColor="@color/text_black"
+                android:text="@string/recent_trade_recode"/>
+
+            <LinearLayout
+                android:id="@+id/bottom_linear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common.146dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/transfer_relative"
+                    android:layout_width="@dimen/common.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_ripple_blue">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common.50sp"
+                        android:text="@string/transfer"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/receivables_relative"
+                    android:layout_width="@dimen/common.0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_ripple_green">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common.50sp"
+                        android:text="@string/gathering"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/record"
+                android:layout_above="@id/bottom_linear"
+                android:background="@color/white">
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/transfer_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common.30dp"
+                    android:layout_marginBottom="@dimen/common.15dp"
+                    android:layout_marginLeft="@dimen/common.40dp"
+                    android:layout_marginRight="@dimen/common.40dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/transfer_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+            </android.support.design.widget.CoordinatorLayout>
+            
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

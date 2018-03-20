@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/split_color"
+    android:orientation="vertical"
+    tools:context="com.example.dell.dkcwallet.activity.LanguageAct">
+
+    <include
+        android:id="@+id/top_split_view"
+        layout="@layout/bar_split_blue_view"/>
+
+    <include
+        layout="@layout/title_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/follow_layout"
+            style="@style/relative_style">
+
+            <View
+                style="@style/split_horizontal_dd"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/left_view"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/follow_system"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/common.46sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chinese_layout"
+            style="@style/relative_style">
+
+            <View
+                style="@style/split_horizontal_dd"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/left_view"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/chinese"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/common.46sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/english_layout"
+            style="@style/relative_style">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/left_view"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/english"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/common.46sp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

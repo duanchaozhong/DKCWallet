@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.dell.dkcwallet"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-feature android:name="android.hardware.camera"/> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus"/> <!-- 自动聚焦权限 -->
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+      
+
+    <!-- 或取自身大小权限 -->
+    <application
+        android:name=".base.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/themeSetting">
+        <activity android:name=".activity.LoginAct">
+        </activity>
+        <activity android:name=".activity.MainAct"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name=".activity.ReceivablesAct"/>
+        <activity android:name=".activity.SettingAct"/>
+        <activity android:name=".activity.DKCAct"/>
+        <activity android:name=".activity.CreateGestureAct"/>
+        <activity android:name=".activity.TransferDKCAct"/>
+        <activity android:name=".activity.TransferDetailAct"/>
+        <activity
+            android:name=".google.zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SplashAct">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.LanguageAct">
+        </activity>
+    </application>
+
+</manifest>

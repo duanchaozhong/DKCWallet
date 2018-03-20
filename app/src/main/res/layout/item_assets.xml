@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common.250dp"
+                android:paddingLeft="@dimen/common.40dp"
+                android:paddingRight="@dimen/common.40dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/dkc_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/common.12dp"
+        android:background="@drawable/dkc_img"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/dkc_img"
+        android:textSize="@dimen/common.46sp"
+        android:layout_marginLeft="@dimen/common.40dp"
+        android:textColor="@color/text_black"
+        android:text="DKC"/>
+
+    <TextView
+        android:id="@+id/sum_dkc"
+        android:layout_toRightOf="@id/title"
+        android:gravity="right"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/common.12dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/common.40dp"
+        android:textSize="@dimen/common.80sp"
+        android:textColor="@color/text_black"
+        android:text="56.56789"/>
+
+    <TextView
+        android:id="@+id/sum_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common.40dp"
+        android:layout_marginRight="@dimen/common.12dp"
+        android:textSize="@dimen/common.46sp"
+        android:textColor="@color/text_dark"
+        android:text="≈¥18.65"/>
+
+</RelativeLayout>

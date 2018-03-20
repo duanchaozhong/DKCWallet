@@ -1,0 +1,73 @@
+package com.example.dell.dkcwallet.http;
+
+/**
+ *
+ * @author yiyang
+ */
+public enum ResponseCode {
+    SUCCESS(0, "成功", "SUCCESS"),
+    USER_HAD_NOT_LOGIN(10004, "用户未登录", "USER_HAD_NOT_LOGIN"),
+    LOGIN_NAME_CANT_BE_NULL(10018, "登录名不能为空", "LOGIN_NAME_CANT_BE_NULL!"),
+    SIGN_CANT_BE_NULL(10019, "签名不能为空", "SIGN_CANT_BE_NULL!"),
+    USER_LOGIN_PASSWORD_CANNOT_BE_EMPTY(10008, "用户登录密码不能为空", "User login password cannot be empty !"),
+    EMAIL_CODE_CANT_BE_NULL(40006, "邮箱验证码不能为空", "EMAIL_CODE_CANT_BE_NULL"),
+    EMAIL_CODE_IS_ERROR(40007, "邮箱验证码错误", "EMAIL_CODE_IS_ERROR"),
+    USER_SIGN_IS_FAIL(10006, "签名失败", "USER_LOGIN_FAIL"),
+    USER_INFO_IS_EXIST(30024, "该用户不存在", "USER_INFO_IS_EXIST"),
+    ACCOUNT_OR_PASSWORD_IS_ERROR(10003, "用户或密码不正确", "ACCOUNT_OR_PASSWORD_IS_ERROR"),
+    ACCOUNT_IS_LOCK(10002, "用户已经被锁定不能登录，请与管理员联系", "ACCOUNT_IS_LOCK"),
+    USER_LOGIN_FAIL(10005, "用户登录失败", "USER_LOGIN_FAIL"),
+
+    EMAIL_CANNOT_NULL(40005, "邮件地址为空", "EMAIL_CANNOT_NULL"),
+    EMAIL_SMS_CODE_SEND_FAIL(40004, "邮件发送失败", "EMAIL_SMS_CODE_SEND_FAIL"),
+
+    TRADE_PLATFORM_CANT_BE_NULL(70009, "系统平台不能为空！", "TRADE_PLATFORM_CANT_BE_NULL"),
+    TRADE_PLATFORM_VERSION_NOT_EXIST(70010, "平台无新版本！", "TRADE_PLATFORM_VERSION_NOT_EXIST"),
+
+    WEBNOTIFY_TYPE_PARAM_ERROR(60008, "参数错误！", "param error!"),
+    INFO_ID_CANT_BE_NULL(30009, "数据编号不能为空", "INFO_ID_CANT_BE_NULL"),
+    TEMPLATE_INFO_IS_NOT_EXIST(60002, "模板数据不存在！", "TEMPLATE_INFO_IS_NOT_EXIST"),
+
+    THE_WALLET_TRPE_DOES_NOT_EXIST(30053, "钱包类型不存在", "The wallet type does not exist"),
+    THE_WALLET_DOES_NOT_EXIST(30054, "钱包不存在", "The wallet does not exist"),
+
+    PARAM_CANT_BE_NULL(20001, "参数不能为空", "PARAM_CANT_BE_NULL"),
+    THE_WALLET_ADDRESS_DOES_NOT_EXIST(30034, "钱包地址不存在", "The wallet address does not exist"),
+    TRADE_USER_ORDER_NOTEXIST(60021, "订单不存在！", "TRADE_USER_ORDER_NOTEXIST"),
+
+    TRADE_USER_TRANSFER_MONEY_ORDER_CANT_BE_NULL(70005, "转账流水号不能为空！", "TRADE_USER_TRANSFER_MONEY_ORDER_CANT_BE_NULL"),
+    TRADE_USER_TRANSFER_MONEY_ORDER_NOTEXIST(70006, "转账单不存在！", "TRADE_USER_TRANSFER_MONEY_FAIL"),
+    TRADE_USER_TRANSFER_MONEY_AMOUNT_CANT_BE_NULL(70008, "转账金额不能为空！", "TRADE_USER_TRANSFER_MONEY_AMOUNT_CANT_BE_NULL"),
+
+    NONE(-100,"服务器繁忙，请稍后再试", "NONE"),
+    COMMON_ERROR_CODE(-10000, "操作失败", "FAIL"),
+
+    TRADE_USERINFO_AUTH_NOTPASSED(60017, "用户信息未通过认证！", "USERINFO_AUTH_NOTPASSED"),
+    OUT_WALLET_NOT_EXIST(70001, "转出钱包不存在", "OUT_WALLET_NOT_EXIST"),
+    TRADE_USER_VERIFYPAYPWD_NOTPASSED(60018, "交易密码校验未通过！", "TRADE_USER_VERIFYPAYPWD_NOTPASSED"),
+    INTO_WALLET_NOT_EXIST(70002, "转入钱包不存在或币种不匹配", "WALLET_NOT_EXIST"),
+    TRADE_USER_BALANCE_NOTENOUGH(60020, "余额不足！", "TRADE_USER_BALANCE_NOTENOUGH"),
+    TRADE_USER_TRANSFER_MONEY_FAIL(70004, "转账失败！", "TRADE_USER_TRANSFER_MONEY_FAIL"),
+
+    LOGIN_TOKEN_CANT_BE_NULL(70011, "登录token不能为空！", "LOGIN_TOKEN_CANT_BE_NULL"),
+    REFRESH_TOKEN_CANT_BE_NULL(70012, "刷新token不能为空！", "REFRESH_TOKEN_CANT_BE_NULL"),
+    LOGIN_TOKEN_IS_EXPIRED_OR_INVALID(70013, "登录token过期或无效！", "LOGIN_TOKEN_IS_EXPIRED_OR_INVALID"),
+    REFRESH_TOKEN_IS_EXPIRED_OR_INVALID(70014, "刷新token过期或无效！", "REFRESH_TOKEN_IS_EXPIRED_OR_INVALID"),
+    UUID_CANT_BE_NULL(70015, "设备唯一标识不能为空！", "UUID_CANT_BE_NULL"),
+    ADD_TOKEN_IS_FAIL(70016, "获取token失败！", "ADD_TOKEN_IS_FAIL"),
+    UPDATE_TOKEN_IS_FAIL(70017, "更新token失败！", "UPDATE_TOKEN_IS_FAIL"),
+    DELETE_TOKEN_IS_FAIL(70018, "删除token失败！", "DELETE_TOKEN_IS_FAIL"),
+    TRANSFER_MONEY_OFF(70020, "转账功能关闭", "Transfer function closed");
+
+
+
+    private int code, msg;
+
+    ResponseCode(int code, String msg, String enMsg) {
+        this.code = code;
+    }
+
+    public boolean is(String code){
+        return String.valueOf(this.code).equals(code);
+    }
+}

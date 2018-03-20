@@ -1,0 +1,1 @@
+include ':app', ':recyclerlibrary', ':lockpattern', ':pickerview', ':updaterLib', ':provideCodeLib'

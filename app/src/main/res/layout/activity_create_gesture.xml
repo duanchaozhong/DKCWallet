@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/assets_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common.600dp"
+        android:background="@android:color/transparent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/common.40dp"
+            android:layout_marginTop="@dimen/common.40dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_white"/>
+
+        <com.example.dell.dkcwallet.view.CircleImageView
+            android:id="@+id/head_img"
+            android:layout_width="@dimen/common.300dp"
+            android:layout_height="@dimen/common.300dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common.200dp"
+            android:background="@drawable/head" />
+
+    </RelativeLayout>
+    
+    <com.star.lockpattern.widget.LockPatternIndicator
+        android:id="@+id/small_lock"
+        android:layout_width="@dimen/common.100dp"
+        android:layout_height="@dimen/common.100dp"
+        android:layout_gravity="center_horizontal" />
+    
+    <TextView
+        android:id="@+id/hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common.40dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/common.50sp"
+        android:textColor="@color/white"
+        android:text="@string/create_gesture_default"/>
+
+    <com.star.lockpattern.widget.LockPatternView
+        android:id="@+id/large_lock"
+        android:layout_width="@dimen/common.680dp"
+        android:layout_height="@dimen/common.680dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/common.80dp"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+    <TextView
+        android:id="@+id/to_login_tv"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:text="@string/login_with_account"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/common.60dp"
+        android:layout_marginRight="@dimen/common.60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

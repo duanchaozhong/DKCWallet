@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/split_color">
+
+    <include
+        layout="@layout/bar_split_blue_view"/>
+
+    <include
+        layout="@layout/title_view"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp">
+
+            <View
+                style="@style/split_horizontal_dd"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:id="@+id/transfer_kinds_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/common.46sp"
+                android:textColor="@color/text_black"
+                android:text="@string/trade_type"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/transfer_kinds_name"
+                android:layout_marginLeft="@dimen/common.40dp"
+                android:textSize="@dimen/common.46sp"
+                android:textColor="@color/text_dark"
+                android:layout_centerVertical="true"
+                android:text="@string/transfer"/>
+
+            <Spinner
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/transfer_kinds_name"
+                android:layout_marginLeft="@dimen/common.40dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/spinner"
+                android:dropDownVerticalOffset="@dimen/common.150dp"
+                android:spinnerMode="dropdown"
+                android:background="@null"
+                style="@style/SpinnerTvStyle"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp">
+
+            <View
+                style="@style/split_horizontal_dd"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:id="@+id/receivable_address_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/common.46sp"
+                android:textColor="@color/text_black"
+                android:text="@string/trade_receive_addr"/>
+
+            <EditText
+                android:id="@+id/address_et"
+                android:layout_toRightOf="@id/receivable_address_name"
+                android:layout_marginLeft="@dimen/common.40dp"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/common.36sp"
+                android:gravity="left|bottom"
+                style="@style/edittext_styte"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""/>
+            <!--58c9548452wcfdds666-->
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.220dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp">
+
+            <View
+                style="@style/split_horizontal_dd"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:id="@+id/transfer_value_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/common.30dp"
+                android:textSize="@dimen/common.46sp"
+                android:textColor="@color/text_black"
+                android:text="@string/trade_amount"/>
+
+            <EditText
+                android:id="@+id/amount_et"
+                style="@style/edittext_styte"
+                android:inputType="numberDecimal"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/transfer_value_name"
+                android:layout_marginTop="@dimen/common.30dp"
+                android:textSize="@dimen/common.40sp"
+                android:textColor="@color/text_black"
+                android:hint="@string/please_enter_your_transfer_amount"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp">
+
+            <EditText
+                android:maxLength="20"
+                android:id="@+id/remark_et"
+                style="@style/edittext_styte"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:textColor="@color/search_color_slide"
+                android:textSize="@dimen/common.46sp"
+                android:hint="@string/remark_20"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common.20dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp">
+
+            <View
+                style="@style/split_horizontal_dd"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/common.46sp"
+                android:textColor="@color/text_black"
+                android:text="@string/trade_amount"/>
+
+            <TextView
+                android:id="@+id/amount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/common.36sp"
+                android:textColor="@color/text_dark"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp">
+
+            <View
+                style="@style/split_horizontal_dd"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/common.46sp"
+                android:textColor="@color/text_black"
+                android:text="@string/fee"/>
+
+            <TextView
+                android:id="@+id/fee_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/common.36sp"
+                android:textColor="@color/text_dark"
+                />
+                <!--android:text="@string/being_calculated"-->
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/common.46sp"
+                android:textColor="@color/text_black"
+                android:text="@string/total_amount"/>
+
+            <TextView
+                android:id="@+id/all_amount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/common.36sp"
+                android:textColor="@color/text_dark"
+                />
+                <!--android:text="@string/being_calculated"-->
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sure_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common.120dp"
+        android:layout_marginLeft="@dimen/common.40dp"
+        android:layout_marginRight="@dimen/common.40dp"
+        android:layout_marginTop="@dimen/common.120dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/common.60sp"
+        android:text="@string/sure_transfer"
+        android:background="@drawable/login_btton">
+
+
+    </Button>
+
+</LinearLayout>

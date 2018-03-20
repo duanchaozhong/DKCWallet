@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">Her-mest</string>
+    <string name="main_tab_assets">Financial</string>
+    <string name="main_tab_transfer">Transfer</string>
+    <string name="main_tab_mine">Record</string>
+    <string name="mine_tab_dkc">DKC transfer record</string>
+    <string name="mine_tab_dkc2">DKC²T transfer record </string>
+    <string name="transfer_record"> transfer record </string>
+
+
+    <!--创建手势锁-->
+    <string name="create_gesture_activity">CreateGestureActivity</string>
+    <string name="create_gesture_reset">重新设置</string>
+    <string name="create_gesture_default">Set gesture password</string>
+    <string name="create_gesture_correct">Confirm gesture password </string>
+    <string name="create_gesture_less_error">Please gesture again（at least line 6 points) </string>
+    <string name="create_gesture_confirm_error">Confirm gesture password is different from the first enter</string>
+    <string name="create_gesture_confirm_correct">Set successfully</string>
+    <string name="gesture_forget_gesture">Forget gesture password </string>
+    <string name="gesture_default">Gesture password </string>
+    <string name="gesture_error">Wrong gesture password </string>
+    <string name="gesture_correct">Correct</string>
+
+    <!--扫描-->
+    <string name="encode_qrcode">生成二维码</string>
+    <string name="dencode_qrcode">扫描二维码</string>
+    <string name="code_text">请输入生成二维码的文本信息</string>
+    <string name="qrcodetext">这里显示扫描结果</string>
+    <string name="qrcode_title">二维码扫描</string>
+    <string name="qrcode_prompt">Put the QR code into the frame to scan automatically</string>
+
+
+    <string name="loading">Loading...</string>
+
+    <string name="default_net_failed">Error, please try again</string>
+    <string name="http_net_failed">HTTP Exception,please try later</string>
+    <string name="socket_timeout_net_failed">The server is no response</string>
+    <string name="connect_net_failed">Net error,please try again later</string>
+    <string name="unknownhost__net_failed">Please check whether your network isconnect</string>
+    <string name="unknownservice_net_failed">Server error</string>
+    <string name="io_net_failed">Incorrect network,please try again later</string>
+    <string name="runtime_net_failed">Error, please try again</string>
+    <string name="parse_net_failed">Incorrect analysis</string>
+
+    <string name="pay_type_to_me">Pay me %s coins</string>
+    <string name="scan_and_pay_type_to_me">Pay me %s coins</string>
+    <string name="being_calculated">calculating...</string>
+    <string name="give_up">Give up</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="sure">Sure</string>
+
+    <string name="need_to_update">Update</string>
+    <string name="not_update">It\'s the lastest version</string>
+    <string name="update_to_new_version">Update version</string>
+    <string name="laster_ver">Version: v</string>
+    <string name="laster_ver_size">\nSize: </string>
+    <string name="ver_update_content">Updating details:\n</string>
+    <string name="ver_update_rightNow">Update now</string>
+
+    <string name="wallet_addr">Wallet address</string>
+    <string name="recent_trade_recode">Recent transfer record</string>
+    <string name="transfer">Transfer</string>
+    <string name="gathering">Gathering</string>
+    <string name="phone_or_email">User-name</string>
+    <string name="account_pwd">Password</string>
+    <string name="press_get_code">Get code</string>
+    <string name="email_code">Makeys passcode</string>
+    <string name="login">Login</string>
+
+    <string name="set_gesture">Set gesture password</string>
+    <string name="clear_cache">Clear system cache</string>
+    <string name="help_center">FAQs</string>
+    <string name="system_upgrade">Update version</string>
+    <string name="exit_login">Logout</string>
+
+    <string name="manual_transfer_1">DKC transfer</string>
+    <string name="manual_transfer_2">DKC² transfer</string>
+    <string name="manual_transfer">%s transfer</string>
+    <string name="trade_success">Succeed</string>
+    <string name="paying_side">Payer</string>
+    <string name="receving_side">Payee</string>
+    <string name="fee">Service fees</string>
+    <string name="trade_no">SN</string>
+    <string name="trade_time">Transaction date </string>
+    <string name="trade_type">Transfer type</string>
+    <string name="to_yuanli">withdraw to Gravity</string>
+    <string name="trade_receive_addr">Gathering address</string>
+    <string name="trade_amount">Transfer amount</string>
+    <string name="remark_20">notice（less than 20 characters）</string>
+    <string name="total_amount">Total deducted</string>
+    <string name="sure_transfer">Submit</string>
+
+    <string name="trade_flow_type">Financial record</string>
+    <string name="all">all</string>
+    <string name="flow_in">in</string>
+    <string name="flow_out">out</string>
+    <string name="begin_amount">Start amount</string>
+    <string name="begin_time">Start date</string>
+    <string name="reset">Reset</string>
+    <string name="finish">Finished</string>
+
+    <string name="input_pay_pwd">Payment password</string>
+    <string name="pay_pwd">Payment password</string>
+    <string name="confirm">Submit</string>
+    <string name="total_assets">Total amount(¥)</string>
+    <string name="input_trand_no_to_search">Enter transaction SN to search</string>
+    <string name="pay">pay</string>
+    <string name="trade_no_">SN:</string>
+    <string name="set_gesture_success">Gesture password set successfully</string>
+    <string name="necessary_permisson">Necessary right</string>
+    <string name="s_can_not_be_empty">%s can’t be empty</string>
+    <string name="re_get_code">Resend</string>
+    <string name="year"></string>
+    <string name="month"></string>
+    <string name="day"></string>
+    <string name="hour"></string>
+    <string name="min"></string>
+    <string name="sec"></string>
+    <string name="press_again_exit">Press again to exit</string>
+    <string name="trade_detail">Transaction details</string>
+    <string name="in_review">Approving</string>
+    <string name="success">Succeed</string>
+    <string name="failed">Failed</string>
+    <string name="dkc_transfer">DKC transfer</string>
+    <string name="without_this_wallet">Sorry, you can’t transfer cause you don’t get the wallet</string>
+    <string name="trade_amount_limit">Transfer amount must more than 1</string>
+    <string name="getting_fee">service fees rate...</string>
+    <string name="waiting">waiting</string>
+    <string name="trade_record">Transaction record</string>
+    <string name="login_with_account">Account login</string>
+    <string name="login_with_gesture">Gesture login</string>
+
+    <string name="permission_denied">Permission denied</string>
+    <string name="follow_system">Follow system</string>
+    <string name="chinese">Chinese</string>
+    <string name="english">English</string>
+    <string name="set_language">Language</string>
+    <string name="confirm_to_logout">Logout？</string>
+    <string name="clear_cache_success">Clear Cache successfully</string>
+    <string name="scan_right_qr">Please scan the correct qr code</string>
+    <string name="transfer_function_closed">Transfer function closed</string>
+    <string name="copy_success">Copy complete</string>
+    <string name="please_enter_your_transfer_amount">Please enter your transfer amount</string>
+    <string name="point_exchange">Point exchange</string>
+    <string name="email_code_hint">verify code</string>
+    <string name="register">Register</string>
+    <string name="makeys_app">Download Makeys</string>
+    <string name="forget_pwd">Forget password</string>
+</resources>

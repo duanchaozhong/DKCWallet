@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.dell.dkcwallet.view.RatioFrameLayout
+            android:id="@+id/login_image"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:ratio="1.698"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_image" />
+        </com.example.dell.dkcwallet.view.RatioFrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/phone_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_below="@id/login_image"
+            android:layout_marginLeft="@dimen/common.80dp"
+            android:layout_marginRight="@dimen/common.80dp"
+            android:layout_marginTop="@dimen/common.80dp">
+
+            <ImageView
+                android:id="@+id/phone_image"
+                android:layout_width="@dimen/common.50dp"
+                android:layout_height="@dimen/common.50dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/person" />
+
+            <EditText
+                android:layout_toLeftOf="@+id/tv_email_last"
+                android:id="@+id/phone_input"
+                android:layout_toRightOf="@id/phone_image"
+                style="@style/edittext_styte"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common.15dp"
+                android:layout_marginBottom="@dimen/common.12dp"
+                android:textSize="@dimen/common.40sp"
+                android:hint="@string/phone_or_email"/>
+
+            <TextView
+                android:id="@+id/tv_email_last"
+                android:layout_marginLeft="5dp"
+                android:text="\@qeveworld.com"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/common.40sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                style="@style/split_horizontal"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pwd_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_below="@id/phone_relative"
+            android:layout_marginLeft="@dimen/common.80dp"
+            android:layout_marginRight="@dimen/common.80dp">
+
+            <ImageView
+                android:id="@+id/pwd_image"
+                android:layout_width="@dimen/common.50dp"
+                android:layout_height="@dimen/common.60dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/common.12dp"
+                android:src="@drawable/lock" />
+
+            <EditText
+                android:id="@+id/pwd_input"
+                style="@style/edittext_styte"
+                android:layout_toRightOf="@id/pwd_image"
+                android:layout_marginLeft="@dimen/common.15dp"
+                android:layout_centerVertical="true"
+                android:inputType="textPassword"
+                android:textSize="@dimen/common.40sp"
+                android:hint="@string/account_pwd"/>
+
+            <View
+                style="@style/split_horizontal"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/code_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.150dp"
+            android:layout_below="@id/pwd_relative"
+            android:layout_marginLeft="@dimen/common.80dp"
+            android:layout_marginRight="@dimen/common.80dp">
+
+            <ImageView
+                android:id="@+id/code_image"
+                android:layout_width="@dimen/common.50dp"
+                android:layout_height="@dimen/common.55dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/yaoshi" />
+            
+            <Button
+                android:visibility="gone"
+                android:id="@+id/code_button"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common.90dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/common.40sp"
+                android:paddingLeft="@dimen/common.30dp"
+                android:paddingRight="@dimen/common.30dp"
+                android:textColor="@color/white"
+                android:background="@drawable/code_btton"
+                android:gravity="center"
+                android:text="@string/press_get_code"/>
+
+            <EditText
+                android:maxLength="8"
+                android:id="@+id/code_input"
+                style="@style/edittext_styte"
+                android:layout_toRightOf="@id/code_image"
+                android:layout_marginLeft="@dimen/common.15dp"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/common.40sp"
+                android:layout_toLeftOf="@id/code_button"
+                android:layout_marginRight="@dimen/common.10dp"
+                android:hint="@string/email_code"/>
+            
+            <View
+                style="@style/split_horizontal"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/login_bt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.130dp"
+            android:layout_below="@id/code_relative"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.80dp"
+            android:layout_marginLeft="@dimen/common.80dp"
+            android:background="@drawable/login_btton"
+            android:textSize="@dimen/common.60sp"
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/login"/>
+
+        <Button
+            android:id="@+id/register_bt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.130dp"
+            android:layout_below="@id/login_bt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.80dp"
+            android:layout_marginLeft="@dimen/common.80dp"
+            android:background="@drawable/register_btton"
+            android:textSize="@dimen/common.60sp"
+            android:textColor="@color/code_background"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/register"/>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/common.60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/forget_pwd_tv"
+                android:text="@string/forget_pwd"
+                android:textColor="#999"
+                android:textSize="@dimen/common.40sp"
+                android:layout_marginLeft="@dimen/common.60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="@dimen/common.10dp"
+                android:textSize="@dimen/common.40sp"
+                android:background="#999"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/dowload_tv"
+                android:text="@string/makeys_app"
+                android:textColor="#999"
+                android:textSize="@dimen/common.40sp"
+                android:layout_marginLeft="@dimen/common.10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        
+        <TextView
+            android:id="@+id/to_login_tv"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/login_with_gesture"
+            android:textColor="#999"
+            android:visibility="gone"
+            android:textSize="@dimen/common.40sp"
+            android:layout_marginBottom="@dimen/common.60dp"
+            android:layout_marginRight="@dimen/common.60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</LinearLayout>

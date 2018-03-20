@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/split_top_view"
+        layout="@layout/bar_split_blue_view"/>
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/receivables_relative"
+            android:layout_width="@dimen/common.480dp"
+            android:layout_height="@dimen/common.480dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/common.220dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/receivables">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/receivables_img"
+                    android:layout_width="@dimen/common.120dp"
+                    android:layout_height="@dimen/common.120dp"
+                    android:layout_marginTop="@dimen/common.20dp"
+                    android:background="@drawable/qr_code"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common.45sp"
+                    android:layout_marginTop="@dimen/common.20dp"
+                    android:text="@string/gathering"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/qr_code_relative"
+            android:layout_width="@dimen/common.480dp"
+            android:layout_height="@dimen/common.480dp"
+            android:layout_below="@id/receivables_relative"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/common.150dp"
+            android:background="@drawable/payment">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/qr_code_img"
+                    android:layout_marginTop="@dimen/common.20dp"
+                    android:layout_width="@dimen/common.120dp"
+                    android:layout_height="@dimen/common.120dp"
+                    android:background="@drawable/scan"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qr_code_img"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common.45sp"
+                    android:layout_marginTop="@dimen/common.20dp"
+                    android:text="@string/pay"/>
+                </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

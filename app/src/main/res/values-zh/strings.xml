@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loading">加载中</string>
+
+    <string name="default_net_failed">出现错误，请重试！</string>
+    <string name="http_net_failed">HTTP响应异常</string>
+    <string name="socket_timeout_net_failed">服务器响应超时</string>
+    <string name="connect_net_failed">网络连接异常，请检查您的网络状态</string>
+    <string name="unknownhost__net_failed">请检查网络是否连接</string>
+    <string name="unknownservice_net_failed">未知的服务器错误</string>
+    <string name="io_net_failed">没有网络，请检查网络连接</string>
+    <string name="runtime_net_failed">运行时错误</string>
+    <string name="parse_net_failed">解析出错</string>
+
+    <string name="give_up">放弃</string>
+    <string name="retry">重试</string>
+
+    <string name="need_to_update">需要更新</string>
+    <string name="not_update">当前已是最新版本</string>
+    <string name="update_to_new_version">升级到新版本</string>
+    <string name="laster_ver">最新版本: v</string>
+    <string name="laster_ver_size">\n最新版本大小: </string>
+    <string name="ver_update_content">更新内容:\n</string>
+    <string name="ver_update_rightNow">立即升级</string>
+
+    <string name="app_name">Her-mest</string>
+    <string name="main_tab_assets">资产</string>
+    <string name="main_tab_transfer">转账</string>
+    <string name="main_tab_mine">记录</string>
+    <string name="mine_tab_dkc">DKC交易记录</string>
+    <string name="mine_tab_dkc2">DKC²T交易记录</string>
+    <string name="transfer_record">交易记录</string>
+
+    <!--创建手势锁-->
+    <string name="create_gesture_activity">CreateGestureActivity</string>
+    <string name="create_gesture_default">绘制解锁图案</string>
+    <string name="create_gesture_correct">再次绘制解锁图案</string>
+    <string name="create_gesture_less_error">至少连接6个点，请重新输入</string>
+    <string name="create_gesture_confirm_error">与上一次绘制不一致，请重新绘制</string>
+    <string name="create_gesture_confirm_correct">设置成功</string>
+    <string name="create_gesture_reset">重新设置</string>
+    <string name="gesture_forget_gesture">忘记手势密码</string>
+    <string name="gesture_default">请输入手势密码</string>
+    <string name="gesture_error">手势密码输入错误</string>
+    <string name="gesture_correct">输入正确</string>
+
+    <!--扫描-->
+    <string name="encode_qrcode">生成二维码</string>
+    <string name="dencode_qrcode">扫描二维码</string>
+    <string name="code_text">请输入生成二维码的文本信息</string>
+    <string name="qrcodetext">这里显示扫描结果</string>
+    <string name="qrcode_title">二维码扫描</string>
+    <string name="qrcode_prompt">请将二维码放入框内 即可自动扫描</string>
+
+
+    <string name="pay_type_to_me">向我支付%s币</string>
+    <string name="scan_and_pay_type_to_me">扫二维码,向我支付%s币</string>
+    <string name="being_calculated">计算中...</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+
+    <string name="wallet_addr">钱包地址</string>
+    <string name="recent_trade_recode">最近交易记录</string>
+    <string name="transfer">转账</string>
+    <string name="gathering">收款</string>
+    <string name="phone_or_email">Makeys账号</string>
+    <string name="account_pwd">账户密码</string>
+    <string name="press_get_code">点击获取验证码</string>
+    <string name="email_code">动态安全码</string>
+    <string name="login">登录</string>
+    <string name="set_gesture">设置手势锁</string>
+    <string name="clear_cache">清除系统缓存</string>
+    <string name="help_center">帮助中心</string>
+    <string name="system_upgrade">版本升级</string>
+    <string name="exit_login">退出登录</string>
+    <string name="manual_transfer_1">手动DKC转账</string>
+    <string name="manual_transfer_2">手动DKC²转账</string>
+    <string name="manual_transfer">手动%s转账</string>
+    <string name="trade_success">交易成功</string>
+    <string name="paying_side">发款方</string>
+    <string name="receving_side">收款方</string>
+    <string name="fee">手续费</string>
+    <string name="trade_no">交易流水号</string>
+    <string name="trade_time">交易时间</string>
+    <string name="trade_type">转账类型</string>
+    <string name="to_yuanli">出金到原力</string>
+    <string name="trade_receive_addr">收款地址</string>
+    <string name="trade_amount">转账数额</string>
+    <string name="remark_20">备注(20字以内)</string>
+    <string name="total_amount">总计扣除</string>
+    <string name="sure_transfer">确认转账</string>
+    <string name="trade_flow_type">资金流向</string>
+    <string name="all">全部</string>
+    <string name="flow_in">流入</string>
+    <string name="flow_out">流出</string>
+    <string name="begin_amount">起始金额</string>
+    <string name="begin_time">起始时间</string>
+    <string name="reset">重置</string>
+    <string name="finish">完成</string>
+    <string name="input_pay_pwd">请输入支付密码</string>
+    <string name="pay_pwd">支付密码</string>
+    <string name="confirm">确认</string>
+    <string name="total_assets">总资产(¥)</string>
+    <string name="input_trand_no_to_search">输入流水号<!--、钱包地址-->搜索</string>
+    <string name="pay">付款</string>
+    <string name="trade_no_">流水号:</string>
+    <string name="set_gesture_success">手势密码设置成功</string>
+    <string name="necessary_permisson">必要的权限</string>
+    <string name="s_can_not_be_empty">%s不能为空</string>
+    <string name="re_get_code">重新获取验证码</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="min">分</string>
+    <string name="sec">秒</string>
+    <string name="press_again_exit">再按一次退出程序</string>
+    <string name="trade_detail">交易详情</string>
+    <string name="in_review">审核中</string>
+    <string name="success">成功</string>
+    <string name="failed">失败</string>
+    <string name="dkc_transfer">DKC转账</string>
+    <string name="without_this_wallet">对不起，您没有这个钱包，不能转账</string>
+    <string name="trade_amount_limit">转账数额不能小于1</string>
+    <string name="getting_fee">费率加载中...</string>
+    <string name="waiting">等待</string>
+    <string name="trade_record">交易记录</string>
+    <string name="login_with_account">使用账户密码登录</string>
+    <string name="login_with_gesture">使用手势密码登录</string>
+
+    <string name="permission_denied">权限被拒</string>
+    <string name="follow_system">跟随系统</string>
+    <string name="chinese">中文</string>
+    <string name="english">英文</string>
+    <string name="set_language">语言设定</string>
+    <string name="confirm_to_logout">是否退出登录</string>
+    <string name="clear_cache_success">清理缓存成功</string>
+    <string name="scan_right_qr">请扫描正确的二维码</string>
+    <string name="transfer_function_closed">转账功能关闭</string>
+    <string name="copy_success">复制成功</string>
+    <string name="please_enter_your_transfer_amount">请输入转账数额</string>
+    <string name="point_exchange">积分兑换</string>
+    <string name="email_code_hint">动态验证码</string>
+    <string name="register">注册</string>
+    <string name="makeys_app">下载Makeys App</string>
+    <string name="forget_pwd">忘记密码</string>
+</resources>

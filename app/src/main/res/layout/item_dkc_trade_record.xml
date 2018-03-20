@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common.160dp">
+
+    <ImageView
+        android:id="@+id/flow_type_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/plus_money"
+        />
+
+    <View
+        android:id="@+id/center_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common.5dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/flow_type_iv"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/serial_number_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/center_view"
+        android:layout_toRightOf="@id/flow_type_iv"
+        android:layout_marginLeft="@dimen/common.20dp"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/common.42sp"
+        android:text="@string/trade_no_"/>
+
+    <TextView
+        android:id="@+id/trade_order_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/common.42sp"
+        android:textColor="@color/text_black"
+        android:layout_above="@id/center_view"
+        android:layout_toRightOf="@id/serial_number_name"
+        android:layout_marginLeft="@dimen/common.10dp"
+        android:layout_marginRight="@dimen/common.10dp"
+        android:layout_toLeftOf="@+id/amount_tv"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="201808192533201808192533"/>
+
+    <TextView
+        android:id="@+id/remark_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/center_view"
+        android:layout_toRightOf="@id/flow_type_iv"
+        android:layout_marginLeft="@dimen/common.20dp"
+        android:textColor="@color/search_color_slide"
+        android:textSize="@dimen/common.40sp"
+        android:layout_toLeftOf="@+id/time_tv"
+        android:layout_marginRight="@dimen/common.20dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="原力入金"/>
+
+    <TextView
+        android:id="@+id/amount_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/center_view"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/common.40sp"
+        android:textColor="@color/item_plus_text"
+        android:text="+20.0000"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/center_view"
+        android:textSize="@dimen/common.36sp"
+        android:textColor="@color/text_black"
+        android:text="2017-10-05"/>
+
+</RelativeLayout>

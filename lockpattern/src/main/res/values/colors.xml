@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="grey_b2b2b2">#B2B2B2</color><!--这是小的初始颜色-->
+    <color name="blue_78d2f6">#FFFFFF</color><!--这是圆圈初始颜色-->
+    <color name="blue_01aaee">#01AAEE</color><!--这是绘制完后上面小的轨迹颜色设置-->
+    <color name="blue_00aaee">#00AAEE</color><!--按下去时的轨迹颜色-->
+    <color name="red_f3323b">#F3323B</color><!--这是绘制错误后的轨迹颜色-->
+
+</resources>

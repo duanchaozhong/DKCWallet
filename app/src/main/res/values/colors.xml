@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#4396FE</color>
+    <color name="transparent">#00000000</color>
+    <color name="split_color">#F2F2F2</color>
+    <color name="split_color_dd">#DDDDDD</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white50">#80FFFFFF</color>
+    <color name="code_background">#4396FE</color>
+    <color name="tab_unselected">#664396FE</color>
+    <color name="red">#FF0000</color>
+    <color name="exit_red">#EF4E53</color>
+    <color name="search_color">#EEEEEE</color>
+    <color name="black">#000000</color>
+    <color name="ripple_color">#30000000</color>
+    <color name="text_black">#333333</color>
+    <color name="text_dark">#666666</color>
+    <color name="tab_mine_unselected">#804396FE</color>
+    <color name="search_color_slide">#999999</color>
+    <color name="green_button">#1FAF9C</color>
+    <color name="green_chart">#801FAF9C</color>
+    <color name="chart_fill1">#A0FFF5</color>
+    <color name="chart_slide1">#38b4af</color>
+    <color name="chart_fill2">#CFFFC0</color>
+    <color name="chart_slide2">#e2e253</color>
+    <color name="item_plus_text">#4496FC</color>
+    <color name="item_sub_text">#1FAF9A</color>
+
+    <color name="filter_select">#56acfe</color>
+    <color name="filter_un_select">#ccc</color>
+    <color name="divider">#ccc</color>
+
+
+    <!-- QRCode scanner color begin -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#B0000000</color>
+    <color name="viewfinder_frame">#90FFFFFF</color>
+    <color name="result_point_color">#C0FFFF00</color>
+    <color name="laser_color">#4496FC</color>
+    <color name="corner_color">#4496FC</color>
+    <color name="success_foodstore">#69C90B</color>
+    <color name="luck_draw_c5">#C5B376</color>
+    <color name="xingzuo54">#5472B0</color>
+    <color name="start_number_e3">#E3ECFF</color>
+    <color name="start_text_a8">#A8C1F2</color>
+    <color name="vetetables_kaiken_shape">#623912</color>
+    <color name="seed_buy2c">#2CAFB6</color>
+    <color name="seed_success99">#999999</color>
+    <color name="transfer_00">#00000000</color>
+    <color name="integral_66">#666666</color>
+    <color name="ratio_41">#41AC33</color>
+    <color name="vegetable_time_0a">#0A5B29</color>
+    <color name="title_37">#373737</color>
+    <color name="cuver_99a3">#99265CA3</color>
+
+    <color name="text_999">#999</color>
+
+</resources>

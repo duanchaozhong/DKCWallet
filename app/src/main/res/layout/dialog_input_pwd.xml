@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        
+        <RelativeLayout
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.120dp"
+            android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/common.46sp"
+                android:text="@string/input_pay_pwd"/>
+
+            <ImageButton
+                android:id="@id/close_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/common.40dp"
+                android:background="@color/transparent"
+                android:src="@drawable/close_image"/>
+
+            <View
+                style="@style/split_horizontal_dd"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pwd_input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.120dp"
+            android:layout_below="@id/title_view"
+            android:layout_marginRight="@dimen/common.40dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginTop="@dimen/common.40dp"
+            android:gravity="center"
+            android:textSize="@dimen/common.46sp"
+            android:textColor="@color/text_black"
+            android:password="true"
+            android:singleLine="true"
+            android:background="@drawable/edittext_split_shape"/>
+
+        <Button
+            android:id="@+id/sure_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.120dp"
+            android:layout_below="@id/pwd_input"
+            android:layout_marginTop="@dimen/common.68dp"
+            android:layout_marginLeft="@dimen/common.40dp"
+            android:layout_marginRight="@dimen/common.40dp"
+            android:background="@drawable/login_btton"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common.46sp"
+            android:text="@string/confirm"/>
+        
+        <View
+            android:layout_below="@id/sure_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common.80dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>
