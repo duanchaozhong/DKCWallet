@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yuanjiao_dialog"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/tishi"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@null"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="这里是提示内容"
+                android:textColor="#333333"
+                android:textCursorDrawable="@null"
+                android:textSize="15sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#333333">
+            </View>
+            <RelativeLayout
+                android:id="@+id/execute"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/dialog_xia"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#1984f2"
+                    android:textSize="15sp"
+                    android:text="@string/sure"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

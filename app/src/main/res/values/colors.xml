@@ -6,6 +6,7 @@
     <color name="transparent">#00000000</color>
     <color name="split_color">#F2F2F2</color>
     <color name="split_color_dd">#DDDDDD</color>
+    <color name="mp_touming">#00000000</color>
     <color name="white">#FFFFFF</color>
     <color name="white50">#80FFFFFF</color>
     <color name="code_background">#4396FE</color>

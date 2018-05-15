@@ -147,4 +147,5 @@
     <string name="register">Register</string>
     <string name="makeys_app">Download Makeys</string>
     <string name="forget_pwd">Forget password</string>
+    <string name="tishi">Tips</string>
 </resources>

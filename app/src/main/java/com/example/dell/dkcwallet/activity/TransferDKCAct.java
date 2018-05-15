@@ -36,6 +36,7 @@ import com.example.dell.dkcwallet.http.BaseObserver;
 import com.example.dell.dkcwallet.http.HttpResult;
 import com.example.dell.dkcwallet.http.RxUtils;
 import com.example.dell.dkcwallet.util.ToastUtils;
+import com.example.dell.dkcwallet.view.MiddleDialog;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 
 import java.math.BigDecimal;
@@ -78,7 +79,6 @@ public class TransferDKCAct extends BaseAct {
     TextView mAllAmountTv;
     @InjectView(R.id.spinner)
     Spinner mSpinner;
-
     private PayPwdDialog payPwdDialog;
     private FeeModel mFee;
     private String mTransferAddr;
@@ -585,16 +585,19 @@ mSpinner.setEnabled(false);
             case R.id.sure_transfer:
                 final String addr = mAddressEt.getText().toString().trim();
                 if(TextUtils.isEmpty(addr)){
-                    ToastUtils.showToast(getApplicationContext(), String.format(getString(R.string.s_can_not_be_empty), getString(R.string.trade_receive_addr)));
+                    //ToastUtils.showToast(getApplicationContext(), String.format(getString(R.string.s_can_not_be_empty), getString(R.string.trade_receive_addr)));
+                    new MiddleDialog(this,String.format(getString(R.string.s_can_not_be_empty), getString(R.string.trade_receive_addr)),R.style.registDialog).show();
                     return;
                 }
                 final String amount = mAmountEt.getText().toString().trim();
                 if (TextUtils.isEmpty(amount)) {
-                    ToastUtils.showToast(getApplicationContext(), String.format(getString(R.string.s_can_not_be_empty), getString(R.string.trade_amount)));
+                    //ToastUtils.showToast(getApplicationContext(), String.format(getString(R.string.s_can_not_be_empty), getString(R.string.trade_amount)));
+                    new MiddleDialog(this,String.format(getString(R.string.s_can_not_be_empty), getString(R.string.trade_amount)),R.style.registDialog).show();
                     return;
                 }
                 if (Double.parseDouble(amount) < 1) {
-                    ToastUtils.showToast(getApplicationContext(), R.string.trade_amount_limit);
+                    //ToastUtils.showToast(getApplicationContext(), R.string.trade_amount_limit);
+                    new MiddleDialog(this,this.getString( R.string.trade_amount_limit),R.style.registDialog).show();
                     return;
                 }
                 if(mFee == null){
@@ -660,10 +663,18 @@ mSpinner.setEnabled(false);
                                                 .putExtra(Constant.TRANSFER_TRADE_NO, model.getTradeNo()));
                                         finish();
                                     }
+
+                                    @Override
+                                    public void onFaild(String code, String message) {
+                                        toast(message);
+                                    }
                                 });
                     }
                 });
                 break;
         }
+    }
+    private void toast(String message){
+        new MiddleDialog(this,message,R.style.registDialog).show();
     }
 }

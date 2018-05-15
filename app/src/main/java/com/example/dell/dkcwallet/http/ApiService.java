@@ -33,13 +33,13 @@ public interface ApiService {
     int LONG_TIMEOUT = 60000;
 
     //测试地址
-//    String BASE_URL = "http://192.168.2.110:8078/api/";
-//    String BASE_URL = "http://192.168.2.58:8078/api/";
+/*//    String BASE_URL = "http://192.168.2.110:8078/api/";
+//    String BASE_URL = "http://192.168.2.58:8078/api/";*/
     String BASE_URL = "http://testapp.savinginvestment.biz/api/";
 
     //正式地址
-//    String BASE_URL = "http://hzapp.savinginvestment.biz/api/";
-//    String BASE_URL = "https://app.savinginvestment.biz/api/";
+    //String BASE_URL = "http://hzapp.savinginvestment.biz/api/";
+   /* //String BASE_URL = "https://app.savinginvestment.biz/api/";*/
 
     String QR_CODE_URL = ApiService.BASE_URL + "financia/wallet/qrcode";
 
