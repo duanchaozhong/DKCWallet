@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +28,7 @@ import com.example.dell.dkcwallet.util.GetMailCodeUtil;
 import com.example.dell.dkcwallet.util.SpUtils;
 import com.example.dell.dkcwallet.util.TimeUtils;
 import com.example.dell.dkcwallet.util.ToastUtils;
+import com.example.dell.dkcwallet.util.VerUtils;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -88,7 +90,7 @@ public class LoginAct extends BaseAct {
     }
     @Override
     protected void initEvent() {
-//        VerUtils.check(mActivity, false);
+        VerUtils.check(mActivity, false);
     }
 
     @Override

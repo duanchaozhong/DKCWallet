@@ -1,7 +1,12 @@
 package com.example.dell.dkcwallet.util;
 
+import android.util.Log;
+
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  *
@@ -9,7 +14,12 @@ import java.util.Date;
  */
 public class TimeUtils {
     public static String getTimeStamp(){
-        return ""+System.currentTimeMillis();
+        //return ""+System.currentTimeMillis();
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+0"));
+        String rt = sdf.format(calendar.getTime());
+        return dateToStamp(rt);
     }
 
     /**
@@ -23,6 +33,32 @@ public class TimeUtils {
         res = simpleDateFormat.format(date);
         return res;
     }
+    /**
+     * 将时间转换为时间戳
+     */
+    public static String dateToStamp(String s){
+        String res = null;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = null;
+        try {
+            date = simpleDateFormat.parse(s);
+            res = date.getTime()+"";
+            Log.i("dcz2:",res);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return res;
+    }
+        public static String timeStamp2Date(String seconds,String format) {
+        if(seconds == null || seconds.isEmpty() || seconds.equals("null")){
+            return "";
+        }
+        if(format == null || format.isEmpty()){
+            format = "yyyy-MM-dd HH:mm:ss";
+            }
+          SimpleDateFormat sdf = new SimpleDateFormat(format);
+          return sdf.format(new Date(Long.valueOf(seconds+"000")));
+        }
     public static String stampToDay(long l){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         return simpleDateFormat.format(new Date(l));
