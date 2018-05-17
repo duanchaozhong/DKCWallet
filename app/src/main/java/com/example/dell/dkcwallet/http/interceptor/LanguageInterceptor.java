@@ -3,6 +3,7 @@ package com.example.dell.dkcwallet.http.interceptor;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.example.dell.dkcwallet.base.App;
 import com.example.dell.dkcwallet.util.L;
 
 import java.io.IOException;
@@ -33,8 +34,7 @@ public class LanguageInterceptor implements Interceptor {
         if (chain == null)
             L.i("http", "Addchain == null");
         final Request.Builder builder = chain.request().newBuilder();
-        Observable.just(context.getResources().getConfiguration().locale.getLanguage().contains("zh")? ZH : EN)
-                .subscribe(new Consumer<String>() {
+        Observable.just(context.getResources().getConfiguration().locale.getLanguage().contains("zh")? ZH : EN).subscribe(new Consumer<String>() {
                     @Override
                     public void accept(@NonNull String lang) throws Exception {
                         if (TextUtils.isEmpty(lang))
@@ -44,6 +44,7 @@ public class LanguageInterceptor implements Interceptor {
                         builder.addHeader("Accept-Language", lang);
                     }
                 });
+        builder.addHeader("version","A_"+ App.Version);
         return chain.proceed(builder.build());
     }
 }

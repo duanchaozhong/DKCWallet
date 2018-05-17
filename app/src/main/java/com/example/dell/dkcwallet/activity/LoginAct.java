@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.example.dell.dkcwallet.BuildConfig;
 import com.example.dell.dkcwallet.Constant;
 import com.example.dell.dkcwallet.R;
+import com.example.dell.dkcwallet.base.App;
 import com.example.dell.dkcwallet.base.BaseAct;
 import com.example.dell.dkcwallet.bean.LoginModel;
 import com.example.dell.dkcwallet.helper.UserHelper;
@@ -25,6 +26,7 @@ import com.example.dell.dkcwallet.mInterface.MailCode;
 import com.example.dell.dkcwallet.util.ACache;
 import com.example.dell.dkcwallet.util.EditTextUtitl;
 import com.example.dell.dkcwallet.util.GetMailCodeUtil;
+import com.example.dell.dkcwallet.util.RSACoder;
 import com.example.dell.dkcwallet.util.SpUtils;
 import com.example.dell.dkcwallet.util.TimeUtils;
 import com.example.dell.dkcwallet.util.ToastUtils;
@@ -171,24 +173,30 @@ public class LoginAct extends BaseAct {
                     return;
                 }
 //                SpUtils.put(mContext, AddCookiesInterceptor.COOKIE, "");
-                ApiManger.getApiService().safeLogin(ApiManger.getUserAgent(), TimeUtils.getTimeStamp(), code, phone+"@qeveworld.com", pwd)
-                        .compose(RxUtils.<HttpResult<LoginModel>>applySchedulers())
-                        .subscribe(new BaseObserver<LoginModel>(mActivity) {
-                            @Override
-                            protected void onSuccess(LoginModel model) {
-                                String user = SpUtils.get(mContext, Constant.TOKEN_SP, Constant.USER, "");
-                                if(!TextUtils.isEmpty(user)){
-                                    if(!user.equals(phone)){
-                                        SpUtils.clear(mContext, Constant.TOKEN_SP);
-                                        ACache.get(new File(getFilesDir(), Constant.S_DIR_NAME)).put(Constant.GESTURE_PASSWORD, new byte[0]);
+                try {
+                    byte[] encodedData = RSACoder.encryptByPublicKey(pwd.getBytes(), App.pub_key);
+                    pwd = RSACoder.encryptBASE64(encodedData);
+                    ApiManger.getApiService().safeLogin(ApiManger.getUserAgent(), TimeUtils.getTimeStamp(), code, phone+"@qeveworld.com", pwd)
+                            .compose(RxUtils.<HttpResult<LoginModel>>applySchedulers())
+                            .subscribe(new BaseObserver<LoginModel>(mActivity) {
+                                @Override
+                                protected void onSuccess(LoginModel model) {
+                                    String user = SpUtils.get(mContext, Constant.TOKEN_SP, Constant.USER, "");
+                                    if(!TextUtils.isEmpty(user)){
+                                        if(!user.equals(phone)){
+                                            SpUtils.clear(mContext, Constant.TOKEN_SP);
+                                            ACache.get(new File(getFilesDir(), Constant.S_DIR_NAME)).put(Constant.GESTURE_PASSWORD, new byte[0]);
+                                        }
                                     }
+                                    SpUtils.put(mContext, Constant.TOKEN_SP, Constant.USER, phone);
+                                    SpUtils.put(mContext, Constant.LOGIN_INFO, new Gson().toJson(model));
+                                    startActivity(new Intent(LoginAct.this,MainAct.class));
+                                    finish();
                                 }
-                                SpUtils.put(mContext, Constant.TOKEN_SP, Constant.USER, phone);
-                                SpUtils.put(mContext, Constant.LOGIN_INFO, new Gson().toJson(model));
-                                startActivity(new Intent(LoginAct.this,MainAct.class));
-                                finish();
-                            }
-                        });
+                            });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
                 break;
             case R.id.register_bt:

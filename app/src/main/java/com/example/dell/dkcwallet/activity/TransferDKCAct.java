@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.example.dell.dkcwallet.Constant;
 import com.example.dell.dkcwallet.R;
+import com.example.dell.dkcwallet.base.App;
 import com.example.dell.dkcwallet.base.BaseAct;
 import com.example.dell.dkcwallet.bean.FeeModel;
 import com.example.dell.dkcwallet.bean.IsCheckModel;
@@ -35,6 +36,7 @@ import com.example.dell.dkcwallet.http.ApiManger;
 import com.example.dell.dkcwallet.http.BaseObserver;
 import com.example.dell.dkcwallet.http.HttpResult;
 import com.example.dell.dkcwallet.http.RxUtils;
+import com.example.dell.dkcwallet.util.RSACoder;
 import com.example.dell.dkcwallet.util.ToastUtils;
 import com.example.dell.dkcwallet.view.MiddleDialog;
 import com.jakewharton.rxbinding2.widget.RxTextView;
@@ -647,6 +649,12 @@ mSpinner.setEnabled(false);
                                         startActivity(new Intent(mActivity, TransferDetailAct.class).putExtra(Constant.TRANSFER_DETAIL, model));
                                     }
                                 });*/
+                        try {
+                            byte[] encodedData = RSACoder.encryptByPublicKey(s.getBytes(), App.pub_key);
+                            s = RSACoder.encryptBASE64(encodedData);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                         ApiManger.getApiService().transfer(null, mCurrType, addr, amount,
                                 mRemarkEt.getText().toString().trim(), mType, s)
                                 .compose(RxUtils.<HttpResult<TransferModel>>applySchedulers())

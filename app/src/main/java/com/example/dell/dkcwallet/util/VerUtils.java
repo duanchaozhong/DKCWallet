@@ -12,6 +12,7 @@ import com.chiclam.android.updater.BuildConfig;
 import com.chiclam.android.updater.Updater;
 import com.chiclam.android.updater.UpdaterConfig;
 import com.example.dell.dkcwallet.R;
+import com.example.dell.dkcwallet.base.ActMgrs;
 import com.example.dell.dkcwallet.base.BaseAct;
 import com.example.dell.dkcwallet.bean.VerModel;
 import com.example.dell.dkcwallet.dialog.CommonDialog;
@@ -86,7 +87,11 @@ public class VerUtils {
                                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
+                                        if(model.getType()==0){
+                                            ActMgrs.getInstance().popAllActivity();
+                                        }else {
+                                            dialog.dismiss();
+                                        }
                                     }
                                 })
                                 .show();

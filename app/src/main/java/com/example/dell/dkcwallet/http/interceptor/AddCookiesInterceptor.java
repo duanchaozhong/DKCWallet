@@ -38,8 +38,7 @@ public class AddCookiesInterceptor implements Interceptor {
         if (chain == null)
             L.i("http", "Addchain == null");
         final Request.Builder builder = chain.request().newBuilder();
-        Observable.just(SpUtils.get(context, COOKIE,""))
-                .subscribe(new Consumer<String>() {
+        Observable.just(SpUtils.get(context, COOKIE,"")).subscribe(new Consumer<String>() {
                     @Override
                     public void accept(@NonNull String cookie) throws Exception {
                         if(TextUtils.isEmpty(cookie))
@@ -50,8 +49,6 @@ public class AddCookiesInterceptor implements Interceptor {
                     }
                 });
 //        return chain.proceed(builder.build());
-
-
         Response originalResponse = chain.proceed(builder.build());
         L.d("http", "originalResponse" + originalResponse.toString());
 

@@ -18,6 +18,7 @@ public class VerModel {
     private String size;
     private String url;
     private long time;
+    private Integer type;
 
     public String getContent() {
         return content;
@@ -25,6 +26,14 @@ public class VerModel {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 
     public String getVersion() {

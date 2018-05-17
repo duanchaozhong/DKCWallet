@@ -1,5 +1,7 @@
 package com.example.dell.dkcwallet.http.interceptor;
 
+import android.util.Log;
+
 import com.example.dell.dkcwallet.util.TimeUtils;
 import com.yiyi.providecodelib.CodeUtils;
 
@@ -41,6 +43,7 @@ public class AddSignInterceptor implements Interceptor {
                     String value = body.value(i);
                     newFormBodyBuilder.add(name, value);
                     params.put(name, value);
+                    Log.i("dcz",name+"+"+value);
                 }
 
                 //有sign的地方有时间戳
