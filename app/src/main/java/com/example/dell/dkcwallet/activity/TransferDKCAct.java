@@ -9,6 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.AdapterView;
@@ -649,9 +650,17 @@ mSpinner.setEnabled(false);
                                         startActivity(new Intent(mActivity, TransferDetailAct.class).putExtra(Constant.TRANSFER_DETAIL, model));
                                     }
                                 });*/
-                        try {
+                        /*try {
                             byte[] encodedData = RSACoder.encryptByPublicKey(s.getBytes(), App.pub_key);
                             s = RSACoder.encryptBASE64(encodedData);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }*/
+                        byte[] encodedData = new byte[0];
+                        try {
+                            encodedData = RSACoder.encryptByPublicKey(s.getBytes(), App.pub_key);
+                            s =RSACoder.encryptBASE64(encodedData);
+                            Log.i("zzz1",s);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }

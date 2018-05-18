@@ -174,30 +174,31 @@ public class LoginAct extends BaseAct {
                 }
 //                SpUtils.put(mContext, AddCookiesInterceptor.COOKIE, "");
                 try {
-                    byte[] encodedData = RSACoder.encryptByPublicKey(pwd.getBytes(), App.pub_key);
-                    pwd = RSACoder.encryptBASE64(encodedData);
-                    ApiManger.getApiService().safeLogin(ApiManger.getUserAgent(), TimeUtils.getTimeStamp(), code, phone+"@qeveworld.com", pwd)
-                            .compose(RxUtils.<HttpResult<LoginModel>>applySchedulers())
-                            .subscribe(new BaseObserver<LoginModel>(mActivity) {
-                                @Override
-                                protected void onSuccess(LoginModel model) {
-                                    String user = SpUtils.get(mContext, Constant.TOKEN_SP, Constant.USER, "");
-                                    if(!TextUtils.isEmpty(user)){
-                                        if(!user.equals(phone)){
-                                            SpUtils.clear(mContext, Constant.TOKEN_SP);
-                                            ACache.get(new File(getFilesDir(), Constant.S_DIR_NAME)).put(Constant.GESTURE_PASSWORD, new byte[0]);
-                                        }
-                                    }
-                                    SpUtils.put(mContext, Constant.TOKEN_SP, Constant.USER, phone);
-                                    SpUtils.put(mContext, Constant.LOGIN_INFO, new Gson().toJson(model));
-                                    startActivity(new Intent(LoginAct.this,MainAct.class));
-                                    finish();
-                                }
-                            });
+                    byte[] encodedData = RSACoder.encryptByPublicKey(pwd.getBytes(),App.pub_key);
+                    pwd =RSACoder.encryptBASE64(encodedData);
+//                    pwd=pwd.replaceAll("\n","");
+                    Log.i("zzz1",pwd);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-
+                ApiManger.getApiService().safeLogin(ApiManger.getUserAgent(), TimeUtils.getTimeStamp(), code, phone+"@qeveworld.com", pwd)
+                        .compose(RxUtils.<HttpResult<LoginModel>>applySchedulers())
+                        .subscribe(new BaseObserver<LoginModel>(mActivity) {
+                            @Override
+                            protected void onSuccess(LoginModel model) {
+                                String user = SpUtils.get(mContext, Constant.TOKEN_SP, Constant.USER, "");
+                                if(!TextUtils.isEmpty(user)){
+                                    if(!user.equals(phone)){
+                                        SpUtils.clear(mContext, Constant.TOKEN_SP);
+                                        ACache.get(new File(getFilesDir(), Constant.S_DIR_NAME)).put(Constant.GESTURE_PASSWORD, new byte[0]);
+                                    }
+                                }
+                                SpUtils.put(mContext, Constant.TOKEN_SP, Constant.USER, phone);
+                                SpUtils.put(mContext, Constant.LOGIN_INFO, new Gson().toJson(model));
+                                startActivity(new Intent(LoginAct.this,MainAct.class));
+                                finish();
+                            }
+                        });
                 break;
             case R.id.register_bt:
                 toUri("http://makeys.qeveworld.com/#/register");

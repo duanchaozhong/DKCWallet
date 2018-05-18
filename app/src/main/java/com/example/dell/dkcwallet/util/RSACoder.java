@@ -160,7 +160,7 @@ public class RSACoder {
         Key publicKey = keyFactory.generatePublic(x509KeySpec);
 
         // 对数据加密
-        Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
+        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");//keyFactory.getAlgorithm());
         cipher.init(Cipher.ENCRYPT_MODE, publicKey);
 
         return cipher.doFinal(data);
@@ -276,7 +276,7 @@ public class RSACoder {
         * @return 解密后的byte[]
         * @throws Exception
         */
-    private static byte[] decryptBASE64(String data) throws Exception {
+    public static byte[] decryptBASE64(String data) throws Exception {
         /*BASE64Decoder decoder = new BASE64Decoder();
         byte[] buffer = decoder.decodeBuffer(data);
         return buffer;
@@ -297,10 +297,10 @@ public class RSACoder {
         System.err.println("私钥： \n\r" +App.pri_key);
     	
     	System.err.println("公钥加密——私钥解密");
-        String inputStr = "88958978996589";
+        String inputStr = "123456";
         byte[] data = inputStr.getBytes();
 
-        byte[] encodedData = RSACoder.encryptByPublicKey(data, publicKey);
+        byte[] encodedData = RSACoder.encryptByPublicKey(data,App.pub_key);
         System.out.println("加密后的字符1："+encodedData);
         String s = new String(encodedData);
         System.out.println("加密后的字符2："+s);
@@ -308,14 +308,14 @@ public class RSACoder {
 //        System.out.println(encodedData.equals(a));
         String a = encryptBASE64(encodedData);
         System.out.println(a);
-        byte[] decodedData = RSACoder.decryptByPrivateKey(decryptBASE64(a), privateKey);
+        byte[] decodedData = RSACoder.decryptByPrivateKey(decryptBASE64(a),App.pri_key);
 
         String outputStr = new String(decodedData);
         System.err.println("加密前: " + inputStr + "\n\r" + "解密后: " + outputStr);
         
         
-        encodedData =  RSACoder.encryptByPrivateKey(data, privateKey);
-        decodedData = RSACoder.decryptByPublicKey(encodedData, publicKey);
+        encodedData =  RSACoder.encryptByPrivateKey(data,App.pri_key);
+        decodedData = RSACoder.decryptByPublicKey(encodedData,App.pub_key);
         outputStr = new String(decodedData);
         System.err.println("加密前: " + inputStr + "\n\r" + "解密后: " + outputStr);
         
